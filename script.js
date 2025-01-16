@@ -90,7 +90,7 @@
 
 const frstArray = ['3', '2', '1'];
 
-frstArray[1] = '50';
+frstArray[1] = '10';
 console.log(frstArray);
 
 // Створити масив із трьох рядків. Додати до масиву ще одну рядків.
