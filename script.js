@@ -25,14 +25,14 @@ for (const arrayResult of thirdArray) {
     sum += Number(arrayResult); 
 }
 
-console.log(sum); 
+console.log(`сума чисел ${sum}`); 
 
 // Створити масив з 5-ти чисел. Вивести на екран всі елементи масиву за допомогою циклу for.
 
 const fourthArray = ['123', '124', '454', '767', '111'];
 
 for (let i = 0; i < fourthArray.length; i++) {
-    console.log(fourthArray[i]);
+    console.log(`всi елементи масиву ${fourthArray[i]}`);
     
 }
 
@@ -42,7 +42,7 @@ const fifthArray = ['John', 'Alexa', 'Harper', 'Makson', 'Sanya']
 
 for (const fifthArrayResult of fifthArray) {
     if (fifthArrayResult.length > 5) {
-        console.log(fifthArrayResult);
+        console.log(`бiльше 5 букв ${fifthArrayResult}`);
     }
 
 
@@ -59,7 +59,7 @@ for (const SixthArrayResult of SixthArray) {
     }
 }
 
-console.log(max);
+console.log(`макс. значення ${max}`);
 
 // Створити масив з 10-ти чисел. Знайти всі парні числа в масиві та вивести їх на екран.
 
@@ -67,8 +67,9 @@ const numbers2 = [23, 43, 67, 89, 12, 56, 78, 91, 35, 10];
 
 for (const number2Result of numbers2) {
     if (number2Result % 2 === 0) {
-        console.log(number2Result);
+        console.log(`парнi числа ${number2Result}`);
 
         continue
     }
 }
+
