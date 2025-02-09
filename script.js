@@ -202,125 +202,420 @@
 // //     console.log(`Login fn ${value+1}`, value);
 // // })
 
-// // ()=>{} анон стрел. функция
+// // // ()=>{} анон стрел. функция
 
-// repeade(4, ()=>{return labels.push(`label${value}value`) } )
+// // repeade(4, ()=>{return labels.push(`label${value}value`) } )
 
-// console.log(labels);
-console.log('1:');
-// 1 Напиши функцію logItems(array), яка отримує масив і використовує цикл for, який для кожного елемента масиву буде виводити в консоль повідомлення в форматі [номер елемента] - [значення елемента].
+// // console.log(labels);
+// console.log('1:');
+// // 1 Напиши функцію logItems(array), яка отримує масив і використовує цикл for, який для кожного елемента масиву буде виводити в консоль повідомлення в форматі [номер елемента] - [значення елемента].
 
-const array = ['Ajax', 'Mango', 'Sanya']
+// const array = ['Ajax', 'Mango', 'Sanya']
 
-const logItems = function (array) {
-    for (let i = 0; i < array.length; i++) {
-        console.log(`${i + 1} - ${array[i]}`);
+// const logItems = function (array) {
+//     for (let i = 0; i < array.length; i++) {
+//         console.log(`${i + 1} - ${array[i]}`);
 
-    }
+//     }
 
+// };
+
+// logItems(array);
+
+// console.log('2:');
+// // 2 Напиши скрипт підрахунку вартості гравіювання прикрас. Для цього створи функцію calculateEngravingPrice(message, pricePerWord) приймаючу рядок (в рядку будуть тільки слова і прогалини) і ціну гравіювання одного слова, і повертає ціну гравіювання всіх слів в рядку.
+
+// const calculateEngravingPrice = function (message, pricePerWord) {
+//     const words = message.split(' ');
+//     const totalPrice = words.length * pricePerWord;
+//     return totalPrice
+// }
+
+// console.log(calculateEngravingPrice('Happy Birthday', 10))
+
+// console.log('3:');
+
+// // 3 напиши функцію findLongestWord(string), яка приймає параметром довільний рядок (в рядку будуть тільки слова і прогалини) і повертає найдовше слово в цьому рядку.
+
+// const findLongestWord = function (string) {
+//     const words = string.split(' ')
+//     let longestWord = ''
+
+//     for (const word of words) {
+//         if (word.length > longestWord.length) {
+//             longestWord = word;
+//         }
+//     }
+//     return longestWord;
+// }
+
+// console.log(findLongestWord('Cats usually eats three times at day'));
+
+// console.log('4:');
+// // 4 Напиши функцію formatString(string) яка приймає рядок і форматує його якщо необхідно.
+
+
+
+// // Якщо довжина рядка не перевищує 40 символів, функція повертає її в початковому вигляді.
+// // Якщо довжина більше 40 символів, то функція обрізає рядок до 40-ка символів і додає в кінець рядка три крапки '...', після чого повертає укорочену версію.
+
+
+
+// const formateString = function (string) {
+//     if (string.length <= 40) {
+//         console.log(string);
+//     } else {
+//         console.log(string.slice(0, 40) + '...');
+//     }
+
+// }
+
+// formateString('коротка строка')
+
+// formateString('Дуже довга строка, в якiй бiльш, нiж 40 символiв, та вона сократиться')
+
+// console.log('5: ');
+// // 5 Напиши функцію checkForSpam(message), приймаючу 1 параметр message — рядок. Функція перевіряє її на вміст слів spam і sale. Якщо знайшли заборонене слово, то функція повертає true, якщо заборонених слів немає функція повертає false. Слова в рядку можуть бути в довільному регістрі.
+
+// const checkForSpam = function (message) {
+//     if (message.includes('spam', 'sale')) {
+//         console.log('спам');
+//     } else {
+//         console.log('ок');
+//     }
+
+// }
+
+// checkForSpam('bla bla bla')
+
+// checkForSpam('bla bla spam sale bla bla spam')
+
+// console.log('6:');
+// // 6 При завантаженні сторінки користувачеві пропонується в prompt ввести число. Введення зберігається в змінну input і додається в масив чисел numbers.
+// // Операція введення числа користувачем і збереження в масив триває до тих пор, пір, поки користувач не натисне Cancel в prompt.
+// // Після того як користувач припинив введення натиснувши Cancel, якщо масив не порожній, необхідно порахувати суму всіх елементів масиву і записати її в змінну total. Використовуй цикл for або for...of. Після чого в консоль виведи рядок 'Загальна сума чисел дорівнює [сума]'.
+
+
+// // 🔔 Робити перевірку того, що користувач ввів саме число, а не довільний набір символів, не обов'язково. Якщо хочеш, в разі некоректного введення, показуй alert з текстом 'Було введено не число, попробуйте ще раз', при цьому результат promptзаписувати в масив чисел не потрібно, після чого знову користувачеві пропонується ввести число в prompt.
+
+// let numbers = []
+// let total = 0
+
+// while (true) {
+//     let input = prompt('Введіть число:');
+
+//     if (input === null) {
+//         break;
+//     }
+
+//     let num = parseFloat(input);
+
+//         if (isNaN(num)) {
+//             alert('Введiть коректне число')
+//         } else {
+//             numbers.push(num)
+//         }
+// }
+
+// for (const num of numbers) {
+//     total += num
+// }
+
+// console.log(`Сума введених чисел: ${total}`);
+
+// 7 дз сделать функции
+
+
+
+
+
+const hotel = {
+    name: 'resolt hotel',
+
+    stars: 5,
+
+    capacity: 100,
 };
 
-logItems(array);
-
-console.log('2:');
-// 2 Напиши скрипт підрахунку вартості гравіювання прикрас. Для цього створи функцію calculateEngravingPrice(message, pricePerWord) приймаючу рядок (в рядку будуть тільки слова і прогалини) і ціну гравіювання одного слова, і повертає ціну гравіювання всіх слів в рядку.
-
-const calculateEngravingPrice = function (message, pricePerWord) {
-    const words = message.split(' ');
-    const totalPrice = words.length * pricePerWord;
-    return totalPrice
-}
-
-console.log(calculateEngravingPrice('Happy Birthday', 10))
-
-console.log('3:');
-
-// 3 напиши функцію findLongestWord(string), яка приймає параметром довільний рядок (в рядку будуть тільки слова і прогалини) і повертає найдовше слово в цьому рядку.
-
-const findLongestWord = function (string) {
-    const words = string.split(' ')
-    let longestWord = ''
-
-    for (const word of words) {
-        if (word.length > longestWord.length) {
-            longestWord = word;
-        }
-    }
-    return longestWord;
-}
-
-console.log(findLongestWord('Cats usually eats three times at day'));
-
-console.log('4:');
-// 4 Напиши функцію formatString(string) яка приймає рядок і форматує його якщо необхідно.
+hotel.name = 'Coastline resort';
 
 
 
-// Якщо довжина рядка не перевищує 40 символів, функція повертає її в початковому вигляді.
-// Якщо довжина більше 40 символів, то функція обрізає рядок до 40-ка символів і додає в кінець рядка три крапки '...', після чого повертає укорочену версію.
+// const car = {
+//     mark: 'mazda',
+//     year: 2014,
+//     Mileage: 14232,
+// }
+
+// const propName = 'name'
+
+// const user = {
+//     age: 35
+// }
+
+// user[propName]
+
+// const books = [
+//     {
+//         title: 'The last Kingdom',
+//         author: 'Sanya',
+//         genres: ['Historical', 'adv'],
+//         isPublic: true,
+//         rating: 8.38
+//     }
+
+// ]
+
+// delete books.author
+
+// const propName = 'name'
+
+// const user = {
+//     age: 35
+// }
+
+// Створіть об’єкт "сar", який буде мати властивості "brand", "model", "year" та "color". Додайте метод, який буде виводити на екран повідомлення про автомобіль зі значеннями всіх властивостей.
+
+// const car = {
+//     brand: 'Toyta',
+//     model: 'Camri',
+//     year: '2020',
+//     color: 'black',
+
+//     changeColor(newColor) {
+//         this.color = newColor;
+
+//     },
+//     addPrice(price) {
+//         return this[price]
+
+//     },
+//     getInfo() {
+//         return `Автомобiль: ${this.brand}, рiк: ${this.year}, колiр: ${this.color}, модель: ${this.model} цiна: ${this.addPrice()}`;
+//     },
+
+// }
 
 
 
-const formateString = function (string) {
-    if (string.length <= 40) {
-        console.log(string);
-    } else {
-        console.log(string.slice(0, 40) + '...');
-    }
+// car.changeColor('yellow');
+// car.addPrice(300);
 
-}
+// console.log(car.getInfo()); 
 
-formateString('коротка строка')
+// const btnValue = document.getElementById('btn');
 
-formateString('Дуже довга строка, в якiй бiльш, нiж 40 символiв, та вона сократиться')
+// btnValue.addEventListener('click', () =>) {
+//     alert('Hello world!')
 
-console.log('5: ');
-// 5 Напиши функцію checkForSpam(message), приймаючу 1 параметр message — рядок. Функція перевіряє її на вміст слів spam і sale. Якщо знайшли заборонене слово, то функція повертає true, якщо заборонених слів немає функція повертає false. Слова в рядку можуть бути в довільному регістрі.
-
-const checkForSpam = function (message) {
-    if (message.includes('spam', 'sale')) {
-        console.log('спам');
-    } else {
-        console.log('ок');
-    }
-
-}
-
-checkForSpam('bla bla bla')
-
-checkForSpam('bla bla spam sale bla bla spam')
-
-console.log('6:');
-// 6 При завантаженні сторінки користувачеві пропонується в prompt ввести число. Введення зберігається в змінну input і додається в масив чисел numbers.
-// Операція введення числа користувачем і збереження в масив триває до тих пор, пір, поки користувач не натисне Cancel в prompt.
-// Після того як користувач припинив введення натиснувши Cancel, якщо масив не порожній, необхідно порахувати суму всіх елементів масиву і записати її в змінну total. Використовуй цикл for або for...of. Після чого в консоль виведи рядок 'Загальна сума чисел дорівнює [сума]'.
+// }
 
 
-// 🔔 Робити перевірку того, що користувач ввів саме число, а не довільний набір символів, не обов'язково. Якщо хочеш, в разі некоректного введення, показуй alert з текстом 'Було введено не число, попробуйте ще раз', при цьому результат promptзаписувати в масив чисел не потрібно, після чого знову користувачеві пропонується ввести число в prompt.
 
-let numbers = []
-let total = 0
 
-while (true) {
-    let input = prompt('Введіть число:');
+// 1. Створіть об'єкт ""bankAccount"" з властивостями ""ownerName"", ""accountNumber"", ""balance"". Додайте до об'єкту метод ""deposit"", який дозволяє додавати гроші на рахунок, та метод ""withdraw"", який дозволяє знімати гроші з рахунку. Методи повинні 
+// зпрацьовувати при натисканні на кнопки “поповнити рахунок” та отримати ‘готівку’ відповідно. Після проведення операції виводити повідомлення про залишок на рахунку
 
-    if (input === null) {
-        break;
-    }
 
-    let num = parseFloat(input);
 
-        if (isNaN(num)) {
-            alert('Введiть коректне число')
+
+const bankAccount = {
+    ownerName: 'Sanya',
+    accountNumber: 12,
+    balance: 4000,
+
+
+    deposit: function (amount, callback) {
+        this.balance += amount;
+        callback(`Ви поповнили рахунок на ${amount} грн. Новий баланс: ${this.balance} грн.`);
+    },
+
+
+    withdraw: function (amount, callback) {
+        if (amount > this.balance) {
+            callback("Недостатньо коштів на рахунку!");
         } else {
-            numbers.push(num)
+            this.balance -= amount;
+            callback(`Ви зняли ${amount} грн. Новий баланс: ${this.balance} грн.`);
         }
+    }
+};
+
+
+const updateBalance = (message) => {
+    document.getElementById("balance").innerText = bankAccount.balance;
+    alert(message);
+};
+
+
+document.getElementById("depositBtn").addEventListener("click", () => {
+    let amount = Number(prompt("Введіть суму для поповнення:"));
+    if (!isNaN(amount) && amount > 0) {
+        bankAccount.deposit(amount, updateBalance);
+    } else {
+        alert("Невірна сума!");
+    }
+});
+
+document.getElementById("withdrawBtn").addEventListener("click", () => {
+    let amount = Number(prompt("Введіть суму для зняття:"));
+    if (!isNaN(amount) && amount > 0) {
+        bankAccount.withdraw(amount, updateBalance);
+    } else {
+        alert("Невірна сума!");
+    }
+});
+
+// Створіть об'єкт ""weather"" з властивостями ""temperature"", ""humidity"", ""windSpeed"". Додайте до об'єкту метод, який повертає ""true"", 
+// якщо температура нижче 0 градусів Цельсія, та ""false"", якщо температура вище або рівна 0 градусів Цельсія. Температуру потрібно отримати з інпуту на сторінці. Якщо метод повернув ""true"" вивести повідомлення “температура нижче 0 градусів Цельсія” і навпаки
+
+const weather = {
+    temperature: null,
+    humidity: 60,
+    windSpeed: 5,
+
+    isBelowZero: function () {
+        if (this.temperature < 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+};
+
+
+document.getElementById("checkTemperatureBtn").addEventListener("click", () => {
+
+    const temperatureInput = document.getElementById("temperatureInput").value;
+
+    if (!isNaN(temperatureInput)) {
+        weather.temperature = Number(temperatureInput);
+
+        const isBelowZero = weather.isBelowZero();
+
+        const message = isBelowZero
+            ? "Температура нижче 0 градусів Цельсія."
+            : "Температура вище або рівна 0 градусів Цельсія.";
+
+        document.getElementById("temperatureMessage").innerText = message;
+    } else {
+        alert("Введіть правильну температуру!");
+    }
+});
+
+
+
+// 3. Створіть об’єкт ""user"", якbq буде мати властивості ""name"", ""email"", ""password"". Додайте метод ""login"", 
+// який буде перевіряти правильність введеного email та password. Використайте інпути для запису значень властивостей в об’єкт
+
+const user = {
+    name: '',
+    email: '',
+    password: '',
+
+    register: function (name, email, password) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        alert("Користувач успішно зареєстрований!");
+    },
+
+    login: function (email, password) {
+        if (this.email === email && this.password === password) {
+            return "Вітаємо, ви увійшли в систему!";
+        } else {
+            return "Невірний email або пароль!";
+        }
+    }
+};
+
+document.getElementById("registerBtn").addEventListener("click", () => {
+    const name = document.getElementById("nameInput").value;
+    const email = document.getElementById("emailInput").value;
+    const password = document.getElementById("passwordInput").value;
+
+    if (name && email && password) {
+        user.register(name, email, password);
+    } else {
+        alert("Будь ласка, заповніть всі поля для реєстрації!");
+    }
+});
+
+document.getElementById("loginBtn").addEventListener("click", () => {
+    const email = document.getElementById("loginEmailInput").value;
+    const password = document.getElementById("loginPasswordInput").value;
+    const loginMessage = user.login(email, password);
+
+    document.getElementById("loginMessage").innerText = loginMessage;
+});
+
+// Створіть об'єкт ""movie"" з властивостями ""title"", ""director"", ""year"", ""rating"". Додайте до об'єкту метод, який повертає ""true"", якщо рейтинг фільму вище 8, та ""false"", якщо рейтинг фільму 8 або нижче. 
+// Вивести значення властивостей на сторінку. Якщо метод повернув ""true"" то змінити колір тексту поля title на зелений.
+
+const movie = {
+    title: "Inception",
+    director: "Christopher Nolan",
+    year: 2010,
+    rating: 8.8,
+
+    checkRating: function() {
+        return this.rating > 8;
+    }
+};
+
+document.getElementById("movieTitle").innerText = movie.title;
+document.getElementById("movieDirector").innerText = movie.director;
+document.getElementById("movieYear").innerText = movie.year;
+document.getElementById("movieRating").innerText = movie.rating;
+
+if (movie.checkRating()) {
+    document.getElementById("movieTitle").style.color = "green";
 }
 
-for (const num of numbers) {
-    total += num
-}
 
-console.log(`Сума введених чисел: ${total}`);
+// ДОДАТКОВЕ
+// та гора тексту що там в мене тут весь екран займе, тому я не вставлю
 
-// сьоме не встигну до дедлайну, я його самостiйно буду робити, коли буде час
+const apartment = {
+    imgUrl: "https://via.placeholder.com/640x480",
+    descr: "Spacious apartment in the city center",
+    rating: 4,
+    price: 2153,
+    tags: ["premium", "promoted", "top"],
+
+    owner: {
+        name: "Henry",
+        phone: "982-126-1588",
+        email: "henry.carter@aptmail.com"
+    }
+};
+
+
+const aptRating = apartment.rating;
+const aptDescr = apartment.descr;
+const aptPrice = apartment.price;
+const aptTags = apartment.tags;
+
+
+const ownerName = apartment.owner.name;
+const ownerPhone = apartment.owner.phone;
+const ownerEmail = apartment.owner.email;
+const numberOfTags = apartment.tags.length;
+const firstTag = apartment.tags[0];
+const lastTag = apartment.tags[apartment.tags.length - 1];
+
+
+apartment.price = 5000;
+apartment.rating = 4.7;
+apartment.owner.name = "Henry Sibola";
+apartment.tags.push("trusted");
+
+
+apartment.area = 60;
+apartment.rooms = 3;
+apartment.location = {
+    country: "Jamaica",
+    city: "Kingston"
+};
+
+console.log(apartment);
