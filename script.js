@@ -409,11 +409,75 @@ hotel.name = 'Coastline resort';
 //     alert('Hello world!')
 
 // }
+// Напиши скрипт який при кліку на кнопку буде виводити на екран повідомлення “Hello World!”. Використовуй колбек в вигляді стрілки
+const button = document.getElementById("button");
+const message = document.getElementById("message");
+
+button.addEventListener("click", () => {
+    message.textContent = "Hello World!";
+});
+// Створи програму, яка генерує випадкове число від 1 до 100. Користувач повинен вгадати число, введенням його в текстове поле. При кліку на кнопку "Перевірити" програма повинна повідомити користувача, чи є їх відповідь правильною.2
+
+const randomNumber = Math.floor(Math.random() * 100) + 1;
+document.getElementById("checkButton").addEventListener("click", () => {
+
+    const userGuess = parseInt(document.getElementById("userGuess").value);
+    document.getElementById("resultMessage").textContent =
+        userGuess === randomNumber ? "Ви вгадали!" : "Неправильно!";
+});
+
+// Створи програму, яка відображає повідомлення про те, скільки разів користувач клікнув на сторінці.
+
+let count = 0;
+document.addEventListener("click", () => {
+    count++;
+    document.getElementById("clickCount").textContent = count;
+});
+
+
+// Напиши функцію, яка приймає масив чисел і колбек-функцію. Функція повинна застосовувати колбек-функцію до кожного елементу масиву та повертати новий масив, 
+// що містить результати застосування колбек-функції до кожного елементу
+
+function callbackToArray(array, callback) {
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        newArray.push(callback(array[i]));
+    }
+    return newArray;
+}
+
+const numbers = [1, 2, 3, 4, 5];
+const double = num => num * 2;
+console.log(callbackToArray(numbers, double)); 
+
+// Розрахунок дисконтної ціни
+
+// Створіть функцію, яка розраховує дисконтну ціну на товар з урахуванням знижки. Функція повинна приймати вартість товару та відсоток знижки як аргументи. 
+// Використайте стрілкову функцію та колбек.
+
+const calculatePrice = (price, discount, callback) => {
+    const discountPrice = price - (price * discount / 100);
+    callback(discountPrice);
+};
+
+const printPrice = (discountPrice) => {
+    console.log(`Дисконтна ціна: ${discountPrice}`);
+};
+
+
+const originalPrice = 1000; 
+const discount = 20; 
+
+calculatePrice(originalPrice, discount, printPrice);
 
 
 
 
-// 1. Створіть об'єкт ""bankAccount"" з властивостями ""ownerName"", ""accountNumber"", ""balance"". Додайте до об'єкту метод ""deposit"", який дозволяє додавати гроші на рахунок, та метод ""withdraw"", який дозволяє знімати гроші з рахунку. Методи повинні 
+
+
+
+// obj
+// 1. Створіть об'єкт ""bankAccount"" з властивостями ""ownerName"", ""accountNumber"", ""balance"". Додайте до об'єкту метод ""deposit"", який дозволяє додавати гроші на рахунок, та метод ""withdraw"", який дозволяє знімати гроші з рахунку. Методи повинні
 // зпрацьовувати при натисканні на кнопки “поповнити рахунок” та отримати ‘готівку’ відповідно. Після проведення операції виводити повідомлення про залишок на рахунку
 
 
@@ -466,7 +530,7 @@ hotel.name = 'Coastline resort';
 //     }
 // });
 
-// // Створіть об'єкт ""weather"" з властивостями ""temperature"", ""humidity"", ""windSpeed"". Додайте до об'єкту метод, який повертає ""true"", 
+// // Створіть об'єкт ""weather"" з властивостями ""temperature"", ""humidity"", ""windSpeed"". Додайте до об'єкту метод, який повертає ""true"",
 // // якщо температура нижче 0 градусів Цельсія, та ""false"", якщо температура вище або рівна 0 градусів Цельсія. Температуру потрібно отримати з інпуту на сторінці. Якщо метод повернув ""true"" вивести повідомлення “температура нижче 0 градусів Цельсія” і навпаки
 
 // const weather = {
@@ -505,7 +569,7 @@ hotel.name = 'Coastline resort';
 
 
 
-// // 3. Створіть об’єкт ""user"", якbq буде мати властивості ""name"", ""email"", ""password"". Додайте метод ""login"", 
+// // 3. Створіть об’єкт ""user"", якbq буде мати властивості ""name"", ""email"", ""password"". Додайте метод ""login"",
 // // який буде перевіряти правильність введеного email та password. Використайте інпути для запису значень властивостей в об’єкт
 
 // const user = {
@@ -549,7 +613,7 @@ hotel.name = 'Coastline resort';
 //     document.getElementById("loginMessage").innerText = loginMessage;
 // });
 
-// // Створіть об'єкт ""movie"" з властивостями ""title"", ""director"", ""year"", ""rating"". Додайте до об'єкту метод, який повертає ""true"", якщо рейтинг фільму вище 8, та ""false"", якщо рейтинг фільму 8 або нижче. 
+// // Створіть об'єкт ""movie"" з властивостями ""title"", ""director"", ""year"", ""rating"". Додайте до об'єкту метод, який повертає ""true"", якщо рейтинг фільму вище 8, та ""false"", якщо рейтинг фільму 8 або нижче.
 // // Вивести значення властивостей на сторінку. Якщо метод повернув ""true"" то змінити колір тексту поля title на зелений.
 
 // const movie = {
@@ -619,4 +683,13 @@ hotel.name = 'Coastline resort';
 // };
 
 // console.log(apartment);
+
+
+
+//6 ========= Методи об'єкту Object.keys(), Object.values(), Object.entries()
+
+//7 Object.keys (obj) - поверне масив, з ключами об'єкта obj у вигляді рядків.
+//7 Object.values (obj) - поверне масив, зі значеннями властивостей об'єкта obj.
+//7 Object.entries (obj) - поверне масив записів, кожним елементом якого буде ще один масив з 2-х елементів, ключа і значення цього ключа з об'єкта Obj.
+
 
