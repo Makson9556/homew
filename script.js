@@ -398,77 +398,77 @@ hotel.name = 'Coastline resort';
 
 
 
-// car.changeColor('yellow');
-// car.addPrice(300);
+// // car.changeColor('yellow');
+// // car.addPrice(300);
 
-// console.log(car.getInfo()); 
+// // console.log(car.getInfo()); 
 
-// const btnValue = document.getElementById('btn');
+// // const btnValue = document.getElementById('btn');
 
-// btnValue.addEventListener('click', () =>) {
-//     alert('Hello world!')
+// // btnValue.addEventListener('click', () =>) {
+// //     alert('Hello world!')
 
+// // }
+// // Напиши скрипт який при кліку на кнопку буде виводити на екран повідомлення “Hello World!”. Використовуй колбек в вигляді стрілки
+// const button = document.getElementById("button");
+// const message = document.getElementById("message");
+
+// button.addEventListener("click", () => {
+//     message.textContent = "Hello World!";
+// });
+// // Створи програму, яка генерує випадкове число від 1 до 100. Користувач повинен вгадати число, введенням його в текстове поле. При кліку на кнопку "Перевірити" програма повинна повідомити користувача, чи є їх відповідь правильною.2
+
+// const randomNumber = Math.floor(Math.random() * 100) + 1;
+// document.getElementById("checkButton").addEventListener("click", () => {
+
+//     const userGuess = parseInt(document.getElementById("userGuess").value);
+//     document.getElementById("resultMessage").textContent =
+//         userGuess === randomNumber ? "Ви вгадали!" : "Неправильно!";
+// });
+
+// // Створи програму, яка відображає повідомлення про те, скільки разів користувач клікнув на сторінці.
+
+// let count = 0;
+// document.addEventListener("click", () => {
+//     count++;
+//     document.getElementById("clickCount").textContent = count;
+// });
+
+
+// // Напиши функцію, яка приймає масив чисел і колбек-функцію. Функція повинна застосовувати колбек-функцію до кожного елементу масиву та повертати новий масив, 
+// // що містить результати застосування колбек-функції до кожного елементу
+
+// function callbackToArray(array, callback) {
+//     let newArray = [];
+//     for (let i = 0; i < array.length; i++) {
+//         newArray.push(callback(array[i]));
+//     }
+//     return newArray;
 // }
-// Напиши скрипт який при кліку на кнопку буде виводити на екран повідомлення “Hello World!”. Використовуй колбек в вигляді стрілки
-const button = document.getElementById("button");
-const message = document.getElementById("message");
 
-button.addEventListener("click", () => {
-    message.textContent = "Hello World!";
-});
-// Створи програму, яка генерує випадкове число від 1 до 100. Користувач повинен вгадати число, введенням його в текстове поле. При кліку на кнопку "Перевірити" програма повинна повідомити користувача, чи є їх відповідь правильною.2
+// const numbers = [1, 2, 3, 4, 5];
+// const double = num => num * 2;
+// console.log(callbackToArray(numbers, double)); 
 
-const randomNumber = Math.floor(Math.random() * 100) + 1;
-document.getElementById("checkButton").addEventListener("click", () => {
+// // Розрахунок дисконтної ціни
 
-    const userGuess = parseInt(document.getElementById("userGuess").value);
-    document.getElementById("resultMessage").textContent =
-        userGuess === randomNumber ? "Ви вгадали!" : "Неправильно!";
-});
+// // Створіть функцію, яка розраховує дисконтну ціну на товар з урахуванням знижки. Функція повинна приймати вартість товару та відсоток знижки як аргументи. 
+// // Використайте стрілкову функцію та колбек.
 
-// Створи програму, яка відображає повідомлення про те, скільки разів користувач клікнув на сторінці.
+// const calculatePrice = (price, discount, callback) => {
+//     const discountPrice = price - (price * discount / 100);
+//     callback(discountPrice);
+// };
 
-let count = 0;
-document.addEventListener("click", () => {
-    count++;
-    document.getElementById("clickCount").textContent = count;
-});
+// const printPrice = (discountPrice) => {
+//     console.log(`Дисконтна ціна: ${discountPrice}`);
+// };
 
 
-// Напиши функцію, яка приймає масив чисел і колбек-функцію. Функція повинна застосовувати колбек-функцію до кожного елементу масиву та повертати новий масив, 
-// що містить результати застосування колбек-функції до кожного елементу
+// const originalPrice = 1000; 
+// const discount = 20; 
 
-function callbackToArray(array, callback) {
-    let newArray = [];
-    for (let i = 0; i < array.length; i++) {
-        newArray.push(callback(array[i]));
-    }
-    return newArray;
-}
-
-const numbers = [1, 2, 3, 4, 5];
-const double = num => num * 2;
-console.log(callbackToArray(numbers, double)); 
-
-// Розрахунок дисконтної ціни
-
-// Створіть функцію, яка розраховує дисконтну ціну на товар з урахуванням знижки. Функція повинна приймати вартість товару та відсоток знижки як аргументи. 
-// Використайте стрілкову функцію та колбек.
-
-const calculatePrice = (price, discount, callback) => {
-    const discountPrice = price - (price * discount / 100);
-    callback(discountPrice);
-};
-
-const printPrice = (discountPrice) => {
-    console.log(`Дисконтна ціна: ${discountPrice}`);
-};
-
-
-const originalPrice = 1000; 
-const discount = 20; 
-
-calculatePrice(originalPrice, discount, printPrice);
+// calculatePrice(originalPrice, discount, printPrice);
 
 
 
@@ -483,213 +483,213 @@ calculatePrice(originalPrice, discount, printPrice);
 
 
 
-// const bankAccount = {
-//     ownerName: 'Sanya',
-//     accountNumber: 12,
-//     balance: 4000,
+const bankAccount = {
+    ownerName: 'Sanya',
+    accountNumber: 12,
+    balance: 4000,
 
 
-//     deposit: function (amount, callback) {
-//         this.balance += amount;
-//         callback(`Ви поповнили рахунок на ${amount} грн. Новий баланс: ${this.balance} грн.`);
-//     },
+    deposit: function (amount, callback) {
+        this.balance += amount;
+        callback(`Ви поповнили рахунок на ${amount} грн. Новий баланс: ${this.balance} грн.`);
+    },
 
 
-//     withdraw: function (amount, callback) {
-//         if (amount > this.balance) {
-//             callback("Недостатньо коштів на рахунку!");
-//         } else {
-//             this.balance -= amount;
-//             callback(`Ви зняли ${amount} грн. Новий баланс: ${this.balance} грн.`);
-//         }
-//     }
-// };
+    withdraw: function (amount, callback) {
+        if (amount > this.balance) {
+            callback("Недостатньо коштів на рахунку!");
+        } else {
+            this.balance -= amount;
+            callback(`Ви зняли ${amount} грн. Новий баланс: ${this.balance} грн.`);
+        }
+    }
+};
 
 
-// const updateBalance = (message) => {
-//     document.getElementById("balance").innerText = bankAccount.balance;
-//     alert(message);
-// };
+const updateBalance = (message) => {
+    document.getElementById("balance").innerText = bankAccount.balance;
+    alert(message);
+};
 
 
-// document.getElementById("depositBtn").addEventListener("click", () => {
-//     let amount = Number(prompt("Введіть суму для поповнення:"));
-//     if (!isNaN(amount) && amount > 0) {
-//         bankAccount.deposit(amount, updateBalance);
-//     } else {
-//         alert("Невірна сума!");
-//     }
-// });
+document.getElementById("depositBtn").addEventListener("click", () => {
+    let amount = Number(prompt("Введіть суму для поповнення:"));
+    if (!isNaN(amount) && amount > 0) {
+        bankAccount.deposit(amount, updateBalance);
+    } else {
+        alert("Невірна сума!");
+    }
+});
 
-// document.getElementById("withdrawBtn").addEventListener("click", () => {
-//     let amount = Number(prompt("Введіть суму для зняття:"));
-//     if (!isNaN(amount) && amount > 0) {
-//         bankAccount.withdraw(amount, updateBalance);
-//     } else {
-//         alert("Невірна сума!");
-//     }
-// });
+document.getElementById("withdrawBtn").addEventListener("click", () => {
+    let amount = Number(prompt("Введіть суму для зняття:"));
+    if (!isNaN(amount) && amount > 0) {
+        bankAccount.withdraw(amount, updateBalance);
+    } else {
+        alert("Невірна сума!");
+    }
+});
 
-// // Створіть об'єкт ""weather"" з властивостями ""temperature"", ""humidity"", ""windSpeed"". Додайте до об'єкту метод, який повертає ""true"",
-// // якщо температура нижче 0 градусів Цельсія, та ""false"", якщо температура вище або рівна 0 градусів Цельсія. Температуру потрібно отримати з інпуту на сторінці. Якщо метод повернув ""true"" вивести повідомлення “температура нижче 0 градусів Цельсія” і навпаки
+// Створіть об'єкт ""weather"" з властивостями ""temperature"", ""humidity"", ""windSpeed"". Додайте до об'єкту метод, який повертає ""true"",
+// якщо температура нижче 0 градусів Цельсія, та ""false"", якщо температура вище або рівна 0 градусів Цельсія. Температуру потрібно отримати з інпуту на сторінці. Якщо метод повернув ""true"" вивести повідомлення “температура нижче 0 градусів Цельсія” і навпаки
 
-// const weather = {
-//     temperature: null,
-//     humidity: 60,
-//     windSpeed: 5,
+const weather = {
+    temperature: null,
+    humidity: 60,
+    windSpeed: 5,
 
-//     isBelowZero: function () {
-//         if (this.temperature < 0) {
-//             return true;
-//         } else {
-//             return false;
-//         }
-//     }
-// };
-
-
-// document.getElementById("checkTemperatureBtn").addEventListener("click", () => {
-
-//     const temperatureInput = document.getElementById("temperatureInput").value;
-
-//     if (!isNaN(temperatureInput)) {
-//         weather.temperature = Number(temperatureInput);
-
-//         const isBelowZero = weather.isBelowZero();
-
-//         const message = isBelowZero
-//             ? "Температура нижче 0 градусів Цельсія."
-//             : "Температура вище або рівна 0 градусів Цельсія.";
-
-//         document.getElementById("temperatureMessage").innerText = message;
-//     } else {
-//         alert("Введіть правильну температуру!");
-//     }
-// });
+    isBelowZero: function () {
+        if (this.temperature < 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+};
 
 
+document.getElementById("checkTemperatureBtn").addEventListener("click", () => {
 
-// // 3. Створіть об’єкт ""user"", якbq буде мати властивості ""name"", ""email"", ""password"". Додайте метод ""login"",
-// // який буде перевіряти правильність введеного email та password. Використайте інпути для запису значень властивостей в об’єкт
+    const temperatureInput = document.getElementById("temperatureInput").value;
 
-// const user = {
-//     name: '',
-//     email: '',
-//     password: '',
+    if (!isNaN(temperatureInput)) {
+        weather.temperature = Number(temperatureInput);
 
-//     register: function (name, email, password) {
-//         this.name = name;
-//         this.email = email;
-//         this.password = password;
-//         alert("Користувач успішно зареєстрований!");
-//     },
+        const isBelowZero = weather.isBelowZero();
 
-//     login: function (email, password) {
-//         if (this.email === email && this.password === password) {
-//             return "Вітаємо, ви увійшли в систему!";
-//         } else {
-//             return "Невірний email або пароль!";
-//         }
-//     }
-// };
+        const message = isBelowZero
+            ? "Температура нижче 0 градусів Цельсія."
+            : "Температура вище або рівна 0 градусів Цельсія.";
 
-// document.getElementById("registerBtn").addEventListener("click", () => {
-//     const name = document.getElementById("nameInput").value;
-//     const email = document.getElementById("emailInput").value;
-//     const password = document.getElementById("passwordInput").value;
-
-//     if (name && email && password) {
-//         user.register(name, email, password);
-//     } else {
-//         alert("Будь ласка, заповніть всі поля для реєстрації!");
-//     }
-// });
-
-// document.getElementById("loginBtn").addEventListener("click", () => {
-//     const email = document.getElementById("loginEmailInput").value;
-//     const password = document.getElementById("loginPasswordInput").value;
-//     const loginMessage = user.login(email, password);
-
-//     document.getElementById("loginMessage").innerText = loginMessage;
-// });
-
-// // Створіть об'єкт ""movie"" з властивостями ""title"", ""director"", ""year"", ""rating"". Додайте до об'єкту метод, який повертає ""true"", якщо рейтинг фільму вище 8, та ""false"", якщо рейтинг фільму 8 або нижче.
-// // Вивести значення властивостей на сторінку. Якщо метод повернув ""true"" то змінити колір тексту поля title на зелений.
-
-// const movie = {
-//     title: "Inception",
-//     director: "Christopher Nolan",
-//     year: 2010,
-//     rating: 8.8,
-
-//     checkRating: function() {
-//         return this.rating > 8;
-//     }
-// };
-
-// document.getElementById("movieTitle").innerText = movie.title;
-// document.getElementById("movieDirector").innerText = movie.director;
-// document.getElementById("movieYear").innerText = movie.year;
-// document.getElementById("movieRating").innerText = movie.rating;
-
-// if (movie.checkRating()) {
-//     document.getElementById("movieTitle").style.color = "green";
-// }
-
-
-// // ДОДАТКОВЕ
-// // та гора тексту що там в мене тут весь екран займе, тому я не вставлю
-
-// const apartment = {
-//     imgUrl: "https://via.placeholder.com/640x480",
-//     descr: "Spacious apartment in the city center",
-//     rating: 4,
-//     price: 2153,
-//     tags: ["premium", "promoted", "top"],
-
-//     owner: {
-//         name: "Henry",
-//         phone: "982-126-1588",
-//         email: "henry.carter@aptmail.com"
-//     }
-// };
-
-
-// const aptRating = apartment.rating;
-// const aptDescr = apartment.descr;
-// const aptPrice = apartment.price;
-// const aptTags = apartment.tags;
-
-
-// const ownerName = apartment.owner.name;
-// const ownerPhone = apartment.owner.phone;
-// const ownerEmail = apartment.owner.email;
-// const numberOfTags = apartment.tags.length;
-// const firstTag = apartment.tags[0];
-// const lastTag = apartment.tags[apartment.tags.length - 1];
-
-
-// apartment.price = 5000;
-// apartment.rating = 4.7;
-// apartment.owner.name = "Henry Sibola";
-// apartment.tags.push("trusted");
-
-
-// apartment.area = 60;
-// apartment.rooms = 3;
-// apartment.location = {
-//     country: "Jamaica",
-//     city: "Kingston"
-// };
-
-// console.log(apartment);
+        document.getElementById("temperatureMessage").innerText = message;
+    } else {
+        alert("Введіть правильну температуру!");
+    }
+});
 
 
 
-//6 ========= Методи об'єкту Object.keys(), Object.values(), Object.entries()
+// 3. Створіть об’єкт ""user"", якbq буде мати властивості ""name"", ""email"", ""password"". Додайте метод ""login"",
+// який буде перевіряти правильність введеного email та password. Використайте інпути для запису значень властивостей в об’єкт
 
-//7 Object.keys (obj) - поверне масив, з ключами об'єкта obj у вигляді рядків.
-//7 Object.values (obj) - поверне масив, зі значеннями властивостей об'єкта obj.
-//7 Object.entries (obj) - поверне масив записів, кожним елементом якого буде ще один масив з 2-х елементів, ключа і значення цього ключа з об'єкта Obj.
+const user = {
+    name: '',
+    email: '',
+    password: '',
+
+    register: function (name, email, password) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        alert("Користувач успішно зареєстрований!");
+    },
+
+    login: function (email, password) {
+        if (this.email === email && this.password === password) {
+            return "Вітаємо, ви увійшли в систему!";
+        } else {
+            return "Невірний email або пароль!";
+        }
+    }
+};
+
+document.getElementById("registerBtn").addEventListener("click", () => {
+    const name = document.getElementById("nameInput").value;
+    const email = document.getElementById("emailInput").value;
+    const password = document.getElementById("passwordInput").value;
+
+    if (name && email && password) {
+        user.register(name, email, password);
+    } else {
+        alert("Будь ласка, заповніть всі поля для реєстрації!");
+    }
+});
+
+document.getElementById("loginBtn").addEventListener("click", () => {
+    const email = document.getElementById("loginEmailInput").value;
+    const password = document.getElementById("loginPasswordInput").value;
+    const loginMessage = user.login(email, password);
+
+    document.getElementById("loginMessage").innerText = loginMessage;
+});
+
+// Створіть об'єкт ""movie"" з властивостями ""title"", ""director"", ""year"", ""rating"". Додайте до об'єкту метод, який повертає ""true"", якщо рейтинг фільму вище 8, та ""false"", якщо рейтинг фільму 8 або нижче.
+// Вивести значення властивостей на сторінку. Якщо метод повернув ""true"" то змінити колір тексту поля title на зелений.
+
+const movie = {
+    title: "Inception",
+    director: "Christopher Nolan",
+    year: 2010,
+    rating: 8.8,
+
+    checkRating: function() {
+        return this.rating > 8;
+    }
+};
+
+document.getElementById("movieTitle").innerText = movie.title;
+document.getElementById("movieDirector").innerText = movie.director;
+document.getElementById("movieYear").innerText = movie.year;
+document.getElementById("movieRating").innerText = movie.rating;
+
+if (movie.checkRating()) {
+    document.getElementById("movieTitle").style.color = "green";
+}
+
+
+// ДОДАТКОВЕ
+// та гора тексту що там в мене тут весь екран займе, тому я не вставлю
+
+const apartment = {
+    imgUrl: "https://via.placeholder.com/640x480",
+    descr: "Spacious apartment in the city center",
+    rating: 4,
+    price: 2153,
+    tags: ["premium", "promoted", "top"],
+
+    owner: {
+        name: "Henry",
+        phone: "982-126-1588",
+        email: "henry.carter@aptmail.com"
+    }
+};
+
+
+const aptRating = apartment.rating;
+const aptDescr = apartment.descr;
+const aptPrice = apartment.price;
+const aptTags = apartment.tags;
+
+
+const ownerName = apartment.owner.name;
+const ownerPhone = apartment.owner.phone;
+const ownerEmail = apartment.owner.email;
+const numberOfTags = apartment.tags.length;
+const firstTag = apartment.tags[0];
+const lastTag = apartment.tags[apartment.tags.length - 1];
+
+
+apartment.price = 5000;
+apartment.rating = 4.7;
+apartment.owner.name = "Henry Sibola";
+apartment.tags.push("trusted");
+
+
+apartment.area = 60;
+apartment.rooms = 3;
+apartment.location = {
+    country: "Jamaica",
+    city: "Kingston"
+};
+
+console.log(apartment);
+
+
+
+// 6 ========= Методи об'єкту Object.keys(), Object.values(), Object.entries()
+
+// 7 Object.keys (obj) - поверне масив, з ключами об'єкта obj у вигляді рядків.
+// 7 Object.values (obj) - поверне масив, зі значеннями властивостей об'єкта obj.
+// 7 Object.entries (obj) - поверне масив записів, кожним елементом якого буде ще один масив з 2-х елементів, ключа і значення цього ключа з об'єкта Obj.
 
 
